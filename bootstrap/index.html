@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"><!-- 国际编码 万国码 -->
+<meta name="viewport" content="width=device-width,initial-scale=1"><!-- 初始化移动浏览显示 -->
+<!--user-scalable值为yes时，允许用户进行缩放，为no时不允许缩放 -->
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      .carousel{
+        height: 500px;
+        background-color: #000;
+        margin-bottom: 60px;
+      }
+      .carousel .item{
+        height: 500px;
+        background: #000;
+      }
+      .carousel img{
+        width: 100%;
+      }
+      .carousel-caption{
+        margin-bottom:20px;
+        font-size: 20px;
+        line-height: 1.8; 
+      }
+      #summary-container .col-md-4{
+        text-align: center;
+      }
+      hr.divider{
+        margin: 40px 0;
+      }
+      .feature{
+        padding: 30px 0;
+      }
+      .feature-heading{
+        font-size: 50px;
+        color: #2a6496;
+        margin-top: 120px;
+      }
+      .feature-heading .text-muted{
+        font-size: 28px;
+        color: #999;
+      }
+
+
+
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <!-- 导航条   navbar --><!-- 添加.navbar-fixed-top类可以让导航条固定在顶部   .navbar-inverse改变外观 变成黑底显示 -->
+  <!-- 添加.navbar-fixed-top会遮住页面上其他内容，除非给<body>元素设置了padding。导航条默认50px，可以设置body的padding-top：70px。 -->
+  <!--        导航条   默认            导航条   -->
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container"> <!--container 或 container-fluid  导航条居中及自适应显示 -->
+      <div class="navbar-header">
+        <!-- 宽度小于某值时出现三行图标 -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- 商标  logo -->
+        <a class="navbar-brand" href="#">现代浏览器博物馆</a>
+      </div>
+      <!-- 点击上方三行图标会弹出下面包裹的代码内容 -->
+      <div class="collapse navbar-collapse" id="demo-navbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">综述</a></li>
+          <li><a href="#">简述</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">特点<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#tab-chrome">Chrome</a></li>
+            <li><a href="#tab-firefox">Firefox</a></li>
+            <li><a href="#tab-safari">Safari</a></li>
+            <li><a href="#tab-opera">Opare</a></li> 
+            <li class="divider"></li><!-- 分割线 -->
+            <li><a href="#tab-ie">Ie</a></li>
+          </ul>
+          </li>
+          <li><a href="#" data-toggle="modal" data-target="#about">关于</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- indecators  指标-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+    <!--  Wrapper for slides  包装的幻灯片-->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/chrome.jpg" alt="1 slide">
+        <div class="carousel-caption">
+          <h1>Chrome</h1>
+          <p>Google Chrome ，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
+          <p><a class="btn btn-lg btn-primary" href="http://www.google.cn/intl/zh-CN/chrome/browser/" role="button" target="_blank">点我下载</a></p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/firefox.jpg" alt="2 slide">
+        <div class="carousel-caption">
+          <h3>Firefox</h3>
+          <p>Mozilla Firefox ，中文名通常称为“火狐”或“火狐浏览器”，是一个开源浏览器。</p>
+          <p><a class="btn btn-lg btn-primary" href="http://www.firefox.com.cn/download/" role="button" target="_blank">点我下载</a></p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/safari.jpg" alt="3 slide">
+        <div class="carousel-caption">
+        <h3>Safari</h3>
+        <p>Safari ,是苹果计算机的最新操作系统Mac Os X 中的浏览器。</p>
+        <p><a class="btn btn-lg btn-primary" href="http://www.apple.com/cn/safari/" role="button" target="_blank">点我下载</a></p>
+          
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/opera.jpg" alt="4 slide">
+        <div class="carousel-caption">
+          <h3>Opera</h3>
+          <p>Opera浏览器 ，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。</p>
+          <p><a class="btn btn-lg btn-primary" href="http://www.opera.com/zh-cn" role="button" target="_blank">点我下载</a></p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/ie.jpg" alt="5 slide">
+        <div class="carousel-caption">
+          <h3>IE</h3>
+          <p>Internet Explorer ，简称 IE ，是微软公司推出的一款网页浏览器。</p>
+          <p><a class="btn btn-lg btn-primary" href="http://www.ie.microsoft.com" role="button" target="_blank">点我下载</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Controls  控制-->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">上一页</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">下一页</span>
+    </a>
+  </div>
+  <div class="container" id="summary-container">
+    <div class="row">
+      <div class="col-md-4">
+        <img class="img-circle" src="images/chrome.jpg" alt="chrome">
+        <h2>Chrome</h2>
+        <p>Google Chrome ，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
+        <p><a class="btn btn-default" href="http://www.google.cn/intl/zh-CN/chrome/browser/" role="button" target="_blank">点我下载</a></p>
+      </div>
+       <div class="col-md-4">
+        <img class="img-circle" src="images/firefox.jpg" alt="Firefox">
+        <h2>Firefox</h2>
+        <p>Mozilla Firefox ，中文名通常称为“火狐”或“火狐浏览器”，是一个开源浏览器。</p>
+        <p><a class="btn btn-default" href="http://www.firefox.com.cn/download/" role="button" target="_blank">点我下载</a></p>
+      </div>
+       <div class="col-md-4">
+        <img class="img-circle" src="images/safari.jpg" alt="Safari">
+        <h2>Safari</h2>
+        <p>Safari ,是苹果计算机的最新操作系统Mac Os X 中的浏览器。</p>
+        <p><a class="btn btn-default" href="http://www.apple.com/cn/safari/" role="button" target="_blank">点我下载</a></p>
+      </div>
+    </div>
+    <hr class="divider">
+
+     <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" id="tab-list">
+    <li role="presentation" class="active"><a href="#tab-chrome" aria-controls="home" role="tab" data-toggle="tab">Chrome</a></li>
+    <li role="presentation"><a href="#tab-firefox" aria-controls="profile" role="tab" data-toggle="tab">Firefox</a></li>
+    <li role="presentation"><a href="#tab-safari" aria-controls="messages" role="tab" data-toggle="tab">Safari</a></li>
+    <li role="presentation"><a href="#tab-opera" aria-controls="settings" role="tab" data-toggle="tab">Opera</a></li>
+    <li role="presentation"><a href="#tab-ie" aria-controls="settings" role="tab" data-toggle="tab">IE</a></li>
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="tab-chrome">
+      <div class="row feature">
+      <div class="col-md-7">
+        <h2 class="feature-heading">Google Chrome<span class="text-muted">使用最广的浏览器</span></h2>
+        <p class="lead">Google Chrome ，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
+      </div>
+      <div class="col-md-5">
+        <img class="feature-image img-responsive" src="images/chrome.jpg" alt="Chrome">
+      </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tab-firefox">
+    <div class="row feature">
+      <div class="col-md-5">
+        <img class="feature-image img-responsive" src="images/firefox.jpg" alt="Chrome">
+      </div>
+      <div class="col-md-7">
+        <h2 class="feature-heading">Mozilla Firefox<span class="text-muted">通常称为“火狐”或“火狐浏览器”</span></h2>
+        <p class="lead">Mozilla Firefox ，中文名通常称为“火狐”或“火狐浏览器”，是一个开源浏览器。</p>
+      </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tab-safari">
+    <div class="row feature">
+      <div class="col-md-7">
+        <h2 class="feature-heading">Safari<span class="text-muted">苹果浏览器</span></h2>
+        <p class="lead">Safari ,是苹果计算机的最新操作系统Mac Os X 中的浏览器。</p>
+      </div>
+      <div class="col-md-5">
+        <img class="feature-image img-responsive" src="images/safari.jpg" alt="Chrome">
+      </div>
+    </div></div>
+    <div role="tabpanel" class="tab-pane" id="tab-opera">
+    <div class="row feature">
+       <div class="col-md-5">
+        <img class="feature-image img-responsive" src="images/opera.jpg" alt="Chrome">
+      </div>
+      <div class="col-md-7">
+        <h2 class="feature-heading">Opera<span class="text-muted">支持多页面的浏览器</span></h2>
+        <p class="lead">Opera浏览器 ，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。</p>
+      </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tab-ie">
+    <div class="row feature">
+      <div class="col-md-7">
+        <h2 class="feature-heading">IE<span class="text-muted">微软的浏览器</span></h2>
+        <p class="lead">Internet Explorer ，简称 IE ，是微软公司推出的一款网页浏览器。</p>
+      </div>
+      <div class="col-md-5">
+        <img class="feature-image img-responsive" src="images/ie.jpg" alt="Chrome">
+      </div>
+    </div>
+    </div>
+  </div>
+  <hr class="divider">
+  <footer>
+    <p class="pull-right"><a href="#top">回到顶部</a></p>
+    <p>1008611@.com</p>
+  </footer>
+  </div>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="about">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">关于</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+ 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#demo-navbar .dropdown-menu a").click(function(){
+          var href=$(this).attr("href");
+          $("#tab-list a[href='"+ href +"']").tab("show");
+        });
+      });
+    </script>
+</body>
+</html>
